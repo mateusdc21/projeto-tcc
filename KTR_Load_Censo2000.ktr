@@ -463,14 +463,121 @@
     <hop>
       <from>Text file input</from>
       <to>Select values</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Select values</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Text file input v2</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>      <field>        <name>V0102</name>
+        <rename/>
+      </field>      <field>        <name>V0103</name>
+        <rename/>
+      </field>      <field>        <name>V0104</name>
+        <rename/>
+      </field>      <field>        <name>V0300</name>
+        <rename/>
+      </field>      <field>        <name>V0400</name>
+        <rename/>
+      </field>      <field>        <name>V0401</name>
+        <rename/>
+      </field>      <field>        <name>V0402</name>
+        <rename/>
+      </field>      <field>        <name>V0403</name>
+        <rename/>
+      </field>      <field>        <name>V0408</name>
+        <rename/>
+      </field>      <field>        <name>V0415</name>
+        <rename/>
+      </field>      <field>        <name>V0416</name>
+        <rename/>
+      </field>      <field>        <name>V0417</name>
+        <rename/>
+      </field>      <field>        <name>V0418</name>
+        <rename/>
+      </field>      <field>        <name>V0419</name>
+        <rename/>
+      </field>      <field>        <name>V0420</name>
+        <rename/>
+      </field>      <field>        <name>V0422</name>
+        <rename/>
+      </field>      <field>        <name>V0436</name>
+        <rename/>
+      </field>      <field>        <name>V0437</name>
+        <rename/>
+      </field>      <field>        <name>V0438</name>
+        <rename/>
+      </field>      <field>        <name>V0463</name>
+        <rename/>
+      </field>      <field>        <name>V1002</name>
+        <rename/>
+      </field>      <field>        <name>V1003</name>
+        <rename/>
+      </field>      <field>        <name>V1004</name>
+        <rename/>
+      </field>      <field>        <name>V1005</name>
+        <rename/>
+      </field>      <field>        <name>V1006</name>
+        <rename/>
+      </field>      <field>        <name>V1007</name>
+        <rename/>
+      </field>      <field>        <name>V4070</name>
+        <rename/>
+      </field>      <field>        <name>V4210</name>
+        <rename/>
+      </field>      <field>        <name>V4230</name>
+        <rename/>
+      </field>      <field>        <name>V4250</name>
+        <rename/>
+      </field>      <field>        <name>V4276</name>
+        <rename/>
+      </field>      <field>        <name>V4300</name>
+        <rename/>
+      </field>      <field>        <name>V4452</name>
+        <rename/>
+      </field>      <field>        <name>V4620</name>
+        <rename/>
+      </field>      <field>        <name>V4631</name>
+        <rename/>
+      </field>      <field>        <name>V4632</name>
+        <rename/>
+      </field>      <field>        <name>V4752</name>
+        <rename/>
+      </field>      <field>        <name>V4754</name>
+        <rename/>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
   <step>
     <name>Table output</name>
     <type>TableOutput</type>
@@ -485,7 +592,7 @@
     <connection>PostgreSQL Local</connection>
     <schema>public</schema>
     <table>censo2000</table>
-    <commit>1800</commit>
+    <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
@@ -501,440 +608,156 @@
     <return_field/>
     <fields>
         <field>
-          <column_name>cod_uf</column_name>
-          <stream_name>cod_uf</stream_name>
+          <column_name>V0102</column_name>
+          <stream_name>V0102</stream_name>
         </field>
         <field>
-          <column_name>cod_mesorregiao</column_name>
-          <stream_name>cod_mesorregiao</stream_name>
+          <column_name>V0103</column_name>
+          <stream_name>V0103</stream_name>
         </field>
         <field>
-          <column_name>cod_microrregiao</column_name>
-          <stream_name>cod_microrregiao</stream_name>
+          <column_name>V0104</column_name>
+          <stream_name>V0104</stream_name>
         </field>
         <field>
-          <column_name>cod_municipio</column_name>
-          <stream_name>cod_municipio</stream_name>
+          <column_name>V0300</column_name>
+          <stream_name>V0300</stream_name>
         </field>
         <field>
-          <column_name>cod_distrito</column_name>
-          <stream_name>cod_distrito</stream_name>
+          <column_name>V0400</column_name>
+          <stream_name>V0400</stream_name>
         </field>
         <field>
-          <column_name>cod_controle</column_name>
-          <stream_name>cod_controle</stream_name>
+          <column_name>V0401</column_name>
+          <stream_name>V0401</stream_name>
         </field>
         <field>
-          <column_name>cod_pessoa_recenseada</column_name>
-          <stream_name>cod_pessoa_recenseada</stream_name>
+          <column_name>V0402</column_name>
+          <stream_name>V0402</stream_name>
         </field>
         <field>
-          <column_name>cod_regiao_metropolitana</column_name>
-          <stream_name>cod_regiao_metropolitana</stream_name>
+          <column_name>V0403</column_name>
+          <stream_name>V0403</stream_name>
         </field>
         <field>
-          <column_name>cod_area_ponderacao</column_name>
-          <stream_name>cod_area_ponderacao</stream_name>
+          <column_name>V0408</column_name>
+          <stream_name>V0408</stream_name>
         </field>
         <field>
-          <column_name>cod_regiao_geografica</column_name>
-          <stream_name>cod_regiao_geografica</stream_name>
+          <column_name>V0415</column_name>
+          <stream_name>V0415</stream_name>
         </field>
         <field>
-          <column_name>cod_situacao_setor</column_name>
-          <stream_name>cod_situacao_setor</stream_name>
+          <column_name>V0416</column_name>
+          <stream_name>V0416</stream_name>
         </field>
         <field>
-          <column_name>cod_situacao_domicilio</column_name>
-          <stream_name>cod_situacao_domicilio</stream_name>
+          <column_name>V0417</column_name>
+          <stream_name>V0417</stream_name>
         </field>
         <field>
-          <column_name>cod_tipo_setor</column_name>
-          <stream_name>cod_tipo_setor</stream_name>
+          <column_name>V0418</column_name>
+          <stream_name>V0418</stream_name>
         </field>
         <field>
-          <column_name>cod_info_propria_pessoa</column_name>
-          <stream_name>cod_info_propria_pessoa</stream_name>
+          <column_name>V0419</column_name>
+          <stream_name>V0419</stream_name>
         </field>
         <field>
-          <column_name>cod_sexo</column_name>
-          <stream_name>cod_sexo</stream_name>
+          <column_name>V0420</column_name>
+          <stream_name>V0420</stream_name>
         </field>
         <field>
-          <column_name>cod_relacao_resp_domicilio</column_name>
-          <stream_name>cod_relacao_resp_domicilio</stream_name>
+          <column_name>V0422</column_name>
+          <stream_name>V0422</stream_name>
         </field>
         <field>
-          <column_name>cod_relacao_resp_familia</column_name>
-          <stream_name>cod_relacao_resp_familia</stream_name>
+          <column_name>V0436</column_name>
+          <stream_name>V0436</stream_name>
         </field>
         <field>
-          <column_name>cod_numero_familia</column_name>
-          <stream_name>cod_numero_familia</stream_name>
+          <column_name>V0437</column_name>
+          <stream_name>V0437</stream_name>
         </field>
         <field>
-          <column_name>idade_em_anos_completos</column_name>
-          <stream_name>idade_em_anos_completos</stream_name>
+          <column_name>V0438</column_name>
+          <stream_name>V0438</stream_name>
         </field>
         <field>
-          <column_name>idade_em_meses</column_name>
-          <stream_name>idade_em_meses</stream_name>
+          <column_name>V0463</column_name>
+          <stream_name>V0463</stream_name>
         </field>
         <field>
-          <column_name>cod_declaracao_idade</column_name>
-          <stream_name>cod_declaracao_idade</stream_name>
+          <column_name>V1002</column_name>
+          <stream_name>V1002</stream_name>
         </field>
         <field>
-          <column_name>cod_cor</column_name>
-          <stream_name>cod_cor</stream_name>
+          <column_name>V1003</column_name>
+          <stream_name>V1003</stream_name>
         </field>
         <field>
-          <column_name>cod_religiao</column_name>
-          <stream_name>cod_religiao</stream_name>
+          <column_name>V1004</column_name>
+          <stream_name>V1004</stream_name>
         </field>
         <field>
-          <column_name>cod_prolema_mental_permanente</column_name>
-          <stream_name>cod_prolema_mental_permanente</stream_name>
+          <column_name>V1005</column_name>
+          <stream_name>V1005</stream_name>
         </field>
         <field>
-          <column_name>cod_capacidade_enxergar</column_name>
-          <stream_name>cod_capacidade_enxergar</stream_name>
+          <column_name>V1006</column_name>
+          <stream_name>V1006</stream_name>
         </field>
         <field>
-          <column_name>cod_capacidade_ouvir</column_name>
-          <stream_name>cod_capacidade_ouvir</stream_name>
+          <column_name>V1007</column_name>
+          <stream_name>V1007</stream_name>
         </field>
         <field>
-          <column_name>cod_capacidade_locomo&#xe7;&#xe3;o</column_name>
-          <stream_name>cod_capacidade_locomo&#xe7;&#xe3;o</stream_name>
+          <column_name>V4070</column_name>
+          <stream_name>V4070</stream_name>
         </field>
         <field>
-          <column_name>cod_deficiencias</column_name>
-          <stream_name>cod_deficiencias</stream_name>
+          <column_name>V4210</column_name>
+          <stream_name>V4210</stream_name>
         </field>
         <field>
-          <column_name>cod_sempre_morou_municipio</column_name>
-          <stream_name>cod_sempre_morou_municipio</stream_name>
+          <column_name>V4230</column_name>
+          <stream_name>V4230</stream_name>
         </field>
         <field>
-          <column_name>tempo_morando_municipio</column_name>
-          <stream_name>tempo_morando_municipio</stream_name>
+          <column_name>V4250</column_name>
+          <stream_name>V4250</stream_name>
         </field>
         <field>
-          <column_name>cod_nasceu_municipio</column_name>
-          <stream_name>cod_nasceu_municipio</stream_name>
+          <column_name>V4276</column_name>
+          <stream_name>V4276</stream_name>
         </field>
         <field>
-          <column_name>cod_nasceu_nesta_uf</column_name>
-          <stream_name>cod_nasceu_nesta_uf</stream_name>
+          <column_name>V4300</column_name>
+          <stream_name>V4300</stream_name>
         </field>
         <field>
-          <column_name>cod_nacionalidade</column_name>
-          <stream_name>cod_nacionalidade</stream_name>
+          <column_name>V4452</column_name>
+          <stream_name>V4452</stream_name>
         </field>
         <field>
-          <column_name>ano_fixou_residencia_brasil</column_name>
-          <stream_name>ano_fixou_residencia_brasil</stream_name>
+          <column_name>V4620</column_name>
+          <stream_name>V4620</stream_name>
         </field>
         <field>
-          <column_name>cod_uf_ou_pais_nascimento_v4210</column_name>
-          <stream_name>cod_uf_ou_pais_nascimento_v4210</stream_name>
+          <column_name>V4631</column_name>
+          <stream_name>V4631</stream_name>
         </field>
         <field>
-          <column_name>tempo_moradia_uf</column_name>
-          <stream_name>tempo_moradia_uf</stream_name>
+          <column_name>V4632</column_name>
+          <stream_name>V4632</stream_name>
         </field>
         <field>
-          <column_name>cod_uf_ou_pais_anterior_v4230</column_name>
-          <stream_name>cod_uf_ou_pais_anterior_v4230</stream_name>
+          <column_name>V4752</column_name>
+          <stream_name>V4752</stream_name>
         </field>
         <field>
-          <column_name>cod_residencia_31-07-1995</column_name>
-          <stream_name>cod_residencia_31-07-1995</stream_name>
-        </field>
-        <field>
-          <column_name>cod_municipio_residencia</column_name>
-          <stream_name>cod_municipio_residencia</stream_name>
-        </field>
-        <field>
-          <column_name>cod_uf_ou_pais_residencia_31-07-1995_v4260</column_name>
-          <stream_name>cod_uf_ou_pais_residencia_31-07-1995_v4260</stream_name>
-        </field>
-        <field>
-          <column_name>cod_municipio_uf_ou_pais_que_trabalha_v4276</column_name>
-          <stream_name>cod_municipio_uf_ou_pais_que_trabalha_v4276</stream_name>
-        </field>
-        <field>
-          <column_name>cod_sabe_ler_escrever</column_name>
-          <stream_name>cod_sabe_ler_escrever</stream_name>
-        </field>
-        <field>
-          <column_name>cod_frequenta_escola</column_name>
-          <stream_name>cod_frequenta_escola</stream_name>
-        </field>
-        <field>
-          <column_name>cod_curso_frequentado</column_name>
-          <stream_name>cod_curso_frequentado</stream_name>
-        </field>
-        <field>
-          <column_name>cod_serie_frequentada</column_name>
-          <stream_name>cod_serie_frequentada</stream_name>
-        </field>
-        <field>
-          <column_name>cod_curso_mais_elevado_frequentou</column_name>
-          <stream_name>cod_curso_mais_elevado_frequentou</stream_name>
-        </field>
-        <field>
-          <column_name>cod_ultima_serie_aprovada</column_name>
-          <stream_name>cod_ultima_serie_aprovada</stream_name>
-        </field>
-        <field>
-          <column_name>cod_concluiu_curso_frequentado</column_name>
-          <stream_name>cod_concluiu_curso_frequentado</stream_name>
-        </field>
-        <field>
-          <column_name>cod_curso_mais_elevado_concluido</column_name>
-          <stream_name>cod_curso_mais_elevado_concluido</stream_name>
-        </field>
-        <field>
-          <column_name>cod_anos_estudo</column_name>
-          <stream_name>cod_anos_estudo</stream_name>
-        </field>
-        <field>
-          <column_name>cod_vive_com_conjuge</column_name>
-          <stream_name>cod_vive_com_conjuge</stream_name>
-        </field>
-        <field>
-          <column_name>cod_natureza_ultima_uniao</column_name>
-          <stream_name>cod_natureza_ultima_uniao</stream_name>
-        </field>
-        <field>
-          <column_name>cod_estado_civil</column_name>
-          <stream_name>cod_estado_civil</stream_name>
-        </field>
-        <field>
-          <column_name>cod_trabalho_remunerado_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_trabalho_remunerado_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_afastado_trabalho_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_afastado_trabalho_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_aprendiz_estagiario_ajudante_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_aprendiz_estagiario_ajudante_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_ajudante_rural_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_ajudante_rural_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_cultivo_alimentacao_domicilio_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_cultivo_alimentacao_domicilio_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_quantos_trabalhos_ultima_semana_julho_2000</column_name>
-          <stream_name>cod_quantos_trabalhos_ultima_semana_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>cod_novo_ocupacao</column_name>
-          <stream_name>cod_novo_ocupacao</stream_name>
-        </field>
-        <field>
-          <column_name>cod_novo_atividade</column_name>
-          <stream_name>cod_novo_atividade</stream_name>
-        </field>
-        <field>
-          <column_name>cod_tipo_trabalho</column_name>
-          <stream_name>cod_tipo_trabalho</stream_name>
-        </field>
-        <field>
-          <column_name>cod_empregado_rjfp_ou_militar</column_name>
-          <stream_name>cod_empregado_rjfp_ou_militar</stream_name>
-        </field>
-        <field>
-          <column_name>cod_quantos_empregados_na_firma</column_name>
-          <stream_name>cod_quantos_empregados_na_firma</stream_name>
-        </field>
-        <field>
-          <column_name>cod_contribuinte_previdencia_oficial</column_name>
-          <stream_name>cod_contribuinte_previdencia_oficial</stream_name>
-        </field>
-        <field>
-          <column_name>cod_rendimento_trabalho_principal</column_name>
-          <stream_name>cod_rendimento_trabalho_principal</stream_name>
-        </field>
-        <field>
-          <column_name>cod_rendimento_bruto_trabalho_principal</column_name>
-          <stream_name>cod_rendimento_bruto_trabalho_principal</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos_trabalho_principal</column_name>
-          <stream_name>total_rendimentos_trabalho_principal</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos_trabalho_principal_salarios_minimos</column_name>
-          <stream_name>total_rendimentos_trabalho_principal_salarios_minimos</stream_name>
-        </field>
-        <field>
-          <column_name>cod_sem_rendimentos_demais_trabalhos</column_name>
-          <stream_name>cod_sem_rendimentos_demais_trabalhos</stream_name>
-        </field>
-        <field>
-          <column_name>rendimento_bruto_demais_trabalhos</column_name>
-          <stream_name>rendimento_bruto_demais_trabalhos</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos_demais_trabalhos</column_name>
-          <stream_name>total_rendimentos_demais_trabalhos</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos_demais_trabalhos_salarios_minimos</column_name>
-          <stream_name>total_rendimentos_demais_trabalhos_salarios_minimos</stream_name>
-        </field>
-        <field>
-          <column_name>total_redimentos_todos_trabalhos</column_name>
-          <stream_name>total_redimentos_todos_trabalhos</stream_name>
-        </field>
-        <field>
-          <column_name>total_redimentos_todos_trabalhos_salarios_minimos</column_name>
-          <stream_name>total_redimentos_todos_trabalhos_salarios_minimos</stream_name>
-        </field>
-        <field>
-          <column_name>horas_por_semana_trabalho_principal</column_name>
-          <stream_name>horas_por_semana_trabalho_principal</stream_name>
-        </field>
-        <field>
-          <column_name>horas_trabalhadas_demais_trabalhos</column_name>
-          <stream_name>horas_trabalhadas_demais_trabalhos</stream_name>
-        </field>
-        <field>
-          <column_name>total_horas_trabalhadas</column_name>
-          <stream_name>total_horas_trabalhadas</stream_name>
-        </field>
-        <field>
-          <column_name>cod_providencia_para_conseguir_trabalho</column_name>
-          <stream_name>cod_providencia_para_conseguir_trabalho</stream_name>
-        </field>
-        <field>
-          <column_name>cod_aposentado_previdencia_oficial_julho_2000</column_name>
-          <stream_name>cod_aposentado_previdencia_oficial_julho_2000</stream_name>
-        </field>
-        <field>
-          <column_name>rendimento_aposentadoria_pensao</column_name>
-          <stream_name>rendimento_aposentadoria_pensao</stream_name>
-        </field>
-        <field>
-          <column_name>rendimento_aluguel</column_name>
-          <stream_name>rendimento_aluguel</stream_name>
-        </field>
-        <field>
-          <column_name>rendimento_pensao_alimenticia_mesada_doacao</column_name>
-          <stream_name>rendimento_pensao_alimenticia_mesada_doacao</stream_name>
-        </field>
-        <field>
-          <column_name>rendimento_renda_minima_bolsa-escola_seguro-desemprego</column_name>
-          <stream_name>rendimento_renda_minima_bolsa-escola_seguro-desemprego</stream_name>
-        </field>
-        <field>
-          <column_name>outros_rendimentos</column_name>
-          <stream_name>outros_rendimentos</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos</column_name>
-          <stream_name>total_rendimentos</stream_name>
-        </field>
-        <field>
-          <column_name>total_rendimentos_salarios_minimos</column_name>
-          <stream_name>total_rendimentos_salarios_minimos</stream_name>
-        </field>
-        <field>
-          <column_name>total_filhos_nascidos_vivos</column_name>
-          <stream_name>total_filhos_nascidos_vivos</stream_name>
-        </field>
-        <field>
-          <column_name>total_filhos_nascidos_vivos_estavam_vivos</column_name>
-          <stream_name>total_filhos_nascidos_vivos_estavam_vivos</stream_name>
-        </field>
-        <field>
-          <column_name>idade_ultimo_filho_nascido_vivo</column_name>
-          <stream_name>idade_ultimo_filho_nascido_vivo</stream_name>
-        </field>
-        <field>
-          <column_name>total_filhos_nascidos_mortos</column_name>
-          <stream_name>total_filhos_nascidos_mortos</stream_name>
-        </field>
-        <field>
-          <column_name>total_filhos_tidos</column_name>
-          <stream_name>total_filhos_tidos</stream_name>
-        </field>
-        <field>
-          <column_name>peso</column_name>
-          <stream_name>peso</stream_name>
-        </field>
-        <field>
-          <column_name>estrato_imputacao_renda</column_name>
-          <stream_name>estrato_imputacao_renda</stream_name>
-        </field>
-        <field>
-          <column_name>estrato_imputacao_renda_parcial</column_name>
-          <stream_name>estrato_imputacao_renda_parcial</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_nascidos_vivos_homens</column_name>
-          <stream_name>filhos_nascidos_vivos_homens</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_nascidos_vivos_mulheres</column_name>
-          <stream_name>filhos_nascidos_vivos_mulheres</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_estavam_vivos_homens</column_name>
-          <stream_name>filhos_estavam_vivos_homens</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_estavam_vivos_mulheres</column_name>
-          <stream_name>filhos_estavam_vivos_mulheres</stream_name>
-        </field>
-        <field>
-          <column_name>sexo_ultimo_filho_nascido_vivo</column_name>
-          <stream_name>sexo_ultimo_filho_nascido_vivo</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_nascidos_mortos_homens</column_name>
-          <stream_name>filhos_nascidos_mortos_homens</stream_name>
-        </field>
-        <field>
-          <column_name>filhos_nascidos_mortos_mulheres</column_name>
-          <stream_name>filhos_nascidos_mortos_mulheres</stream_name>
-        </field>
-        <field>
-          <column_name>cod_curso_mais_elevado_concluido_1</column_name>
-          <stream_name>cod_curso_mais_elevado_concluido_1</stream_name>
-        </field>
-        <field>
-          <column_name>cod_uf_ou_pais_nascimento_v4219</column_name>
-          <stream_name>cod_uf_ou_pais_nascimento_v4219</stream_name>
-        </field>
-        <field>
-          <column_name>cod_uf_ou_pais_residencia_anterior_v4239</column_name>
-          <stream_name>cod_uf_ou_pais_residencia_anterior_v4239</stream_name>
-        </field>
-        <field>
-          <column_name>cod_uf_ou_pais_residencia_31-07-1995_v4269</column_name>
-          <stream_name>cod_uf_ou_pais_residencia_31-07-1995_v4269</stream_name>
-        </field>
-        <field>
-          <column_name>cod_pais_estrangeiro_trabalha_estuda_v4279</column_name>
-          <stream_name>cod_pais_estrangeiro_trabalha_estuda_v4279</stream_name>
-        </field>
-        <field>
-          <column_name>cod_antigo_ocupacao</column_name>
-          <stream_name>cod_antigo_ocupacao</stream_name>
-        </field>
-        <field>
-          <column_name>cod_antigo_atividade</column_name>
-          <stream_name>cod_antigo_atividade</stream_name>
+          <column_name>V4754</column_name>
+          <stream_name>V4754</stream_name>
         </field>
     </fields>
     <cluster_schema/>
@@ -3771,8 +3594,8 @@
     </step>
 
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Text file input v2</name>
+    <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -3781,445 +3604,2801 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>      <field>        <name>cod_uf</name>
-        <rename/>
-      </field>      <field>        <name>cod_mesorregiao</name>
-        <rename/>
-      </field>      <field>        <name>cod_microrregiao</name>
-        <rename/>
-      </field>      <field>        <name>cod_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_distrito</name>
-        <rename/>
-      </field>      <field>        <name>cod_controle</name>
-        <rename/>
-      </field>      <field>        <name>cod_pessoa_recenseada</name>
-        <rename/>
-      </field>      <field>        <name>cod_regiao_metropolitana</name>
-        <rename/>
-      </field>      <field>        <name>cod_area_ponderacao</name>
-        <rename/>
-      </field>      <field>        <name>cod_regiao_geografica</name>
-        <rename/>
-      </field>      <field>        <name>cod_situacao_setor</name>
-        <rename/>
-      </field>      <field>        <name>cod_situacao_domicilio</name>
-        <rename/>
-      </field>      <field>        <name>cod_tipo_setor</name>
-        <rename/>
-      </field>      <field>        <name>cod_info_propria_pessoa</name>
-        <rename/>
-      </field>      <field>        <name>cod_sexo</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_sexo</name>
-        <rename/>
-      </field>      <field>        <name>cod_relacao_resp_domicilio</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_relacao_resp_domicilio</name>
-        <rename/>
-      </field>      <field>        <name>cod_relacao_resp_familia</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_relacao_resp_familia</name>
-        <rename/>
-      </field>      <field>        <name>cod_numero_familia</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_numero_familia</name>
-        <rename/>
-      </field>      <field>        <name>idade_em_anos_completos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_idade_anos_completos</name>
-        <rename/>
-      </field>      <field>        <name>idade_em_meses</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_idade_meses</name>
-        <rename/>
-      </field>      <field>        <name>cod_declaracao_idade</name>
-        <rename/>
-      </field>      <field>        <name>cod_cor</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_cor</name>
-        <rename/>
-      </field>      <field>        <name>cod_religiao</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_religia</name>
-        <rename/>
-      </field>      <field>        <name>cod_prolema_mental_permanente</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_problema_mental_permanente</name>
-        <rename/>
-      </field>      <field>        <name>cod_capacidade_enxergar</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_capacidade_enxergar</name>
-        <rename/>
-      </field>      <field>        <name>cod_capacidade_ouvir</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_capacidade_ouvir</name>
-        <rename/>
-      </field>      <field>        <name>cod_capacidade_locomo&#xe7;&#xe3;o</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_capacidade_locomocao</name>
-        <rename/>
-      </field>      <field>        <name>cod_deficiencias</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_deficiencias</name>
-        <rename/>
-      </field>      <field>        <name>cod_sempre_morou_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_sempre_morou_municipio</name>
-        <rename/>
-      </field>      <field>        <name>tempo_morando_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_tempo_morando_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_nasceu_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_nasceu_municipio</name>
-        <rename/>
-      </field>      <field>        <name>cod_nasceu_nesta_uf</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_nasceu_nesta_uf</name>
-        <rename/>
-      </field>      <field>        <name>cod_nacionalidade</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_nacionalidade</name>
-        <rename/>
-      </field>      <field>        <name>ano_fixou_residencia_brasil</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_ano_fixou_residencia_brasil</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_nascimento_v4210</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_uf_ou_pais_nascimento</name>
-        <rename/>
-      </field>      <field>        <name>tempo_moradia_uf</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_tempo_moradia_uf</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_anterior_v4230</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_uf_ou_pais_anterior</name>
-        <rename/>
-      </field>      <field>        <name>cod_residencia_31-07-1995</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_residencia_31-07-1995</name>
-        <rename/>
-      </field>      <field>        <name>cod_municipio_residencia</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_municipio_residencia</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_residencia_31-07-1995_v4260</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_uf_ou_pais_residencia_31-07-1995</name>
-        <rename/>
-      </field>      <field>        <name>cod_municipio_uf_ou_pais_que_trabalha_v4276</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_municipio_uf_ou_pais_que_trabalha</name>
-        <rename/>
-      </field>      <field>        <name>cod_sabe_ler_escrever</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_sabe_ler_escrever</name>
-        <rename/>
-      </field>      <field>        <name>cod_frequenta_escola</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_frequenta_escola</name>
-        <rename/>
-      </field>      <field>        <name>cod_curso_frequentado</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_curso_frequentado</name>
-        <rename/>
-      </field>      <field>        <name>cod_serie_frequentada</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_serie_frequentada</name>
-        <rename/>
-      </field>      <field>        <name>cod_curso_mais_elevado_frequentou</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_curso_mais_elevado_frequentou</name>
-        <rename/>
-      </field>      <field>        <name>cod_ultima_serie_aprovada</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_ultima_serie_aprovada</name>
-        <rename/>
-      </field>      <field>        <name>cod_concluiu_curso_frequentado</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_concluiu_curso_frequentado</name>
-        <rename/>
-      </field>      <field>        <name>cod_curso_mais_elevado_concluido</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_curso_mais_elevado_concluido</name>
-        <rename/>
-      </field>      <field>        <name>cod_anos_estudo</name>
-        <rename/>
-      </field>      <field>        <name>cod_vive_com_conjuge</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_vive_com_conjuge</name>
-        <rename/>
-      </field>      <field>        <name>cod_natureza_ultima_uniao</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_natureza_ultima_uniao</name>
-        <rename/>
-      </field>      <field>        <name>cod_estado_civil</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_estado_civil</name>
-        <rename/>
-      </field>      <field>        <name>cod_trabalho_remunerado_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_trabalho_remunerado_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_afastado_trabalho_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_afastado_trabalho_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_aprendiz_estagiario_ajudante_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_aprendiz_estagiario_ajudante_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_ajudante_rural_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_ajudante_rural_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_cultivo_alimentacao_domicilio_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_cultivo_alimentacao_domicilio_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_quantos_trabalhos_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_quantos_trabalhos_ultima_semana_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_novo_ocupacao</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_novo_ocupacao</name>
-        <rename/>
-      </field>      <field>        <name>cod_novo_atividade</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_novo_atividade</name>
-        <rename/>
-      </field>      <field>        <name>cod_tipo_trabalho</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_tipo_trabalho</name>
-        <rename/>
-      </field>      <field>        <name>cod_empregado_rjfp_ou_militar</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_empregado_rjfp_ou_militar</name>
-        <rename/>
-      </field>      <field>        <name>cod_quantos_empregados_na_firma</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_quantos_empregados_na_firma</name>
-        <rename/>
-      </field>      <field>        <name>cod_contribuinte_previdencia_oficial</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_contribuinte_previdencia_oficial</name>
-        <rename/>
-      </field>      <field>        <name>cod_rendimento_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>cod_rendimento_bruto_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_bruto_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos_trabalho_principal_salarios_minimos</name>
-        <rename/>
-      </field>      <field>        <name>cod_sem_rendimentos_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_sem_rendimentos_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>rendimento_bruto_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_bruto_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos_demais_trabalhos_salarios_minimos</name>
-        <rename/>
-      </field>      <field>        <name>total_redimentos_todos_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>total_redimentos_todos_trabalhos_salarios_minimos</name>
-        <rename/>
-      </field>      <field>        <name>horas_por_semana_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_horas_por_semana_trabalho_principal</name>
-        <rename/>
-      </field>      <field>        <name>horas_trabalhadas_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_horas_trabalhadas_demais_trabalhos</name>
-        <rename/>
-      </field>      <field>        <name>total_horas_trabalhadas</name>
-        <rename/>
-      </field>      <field>        <name>cod_providencia_para_conseguir_trabalho</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_providencia_para_conseguir_trabalho</name>
-        <rename/>
-      </field>      <field>        <name>cod_aposentado_previdencia_oficial_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_aposentado_previdencia_oficial_julho_2000</name>
-        <rename/>
-      </field>      <field>        <name>rendimento_aposentadoria_pensao</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_aposentadoria_pensao</name>
-        <rename/>
-      </field>      <field>        <name>rendimento_aluguel</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_aluguel</name>
-        <rename/>
-      </field>      <field>        <name>rendimento_pensao_alimenticia_mesada_doacao</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_pensao_alimenticia_mesada_doacao</name>
-        <rename/>
-      </field>      <field>        <name>rendimento_renda_minima_bolsa-escola_seguro-desemprego</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_rendimento_renda_minima_bolsa-escola_seguro-desemprego</name>
-        <rename/>
-      </field>      <field>        <name>outros_rendimentos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_outros_rendimentos</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos</name>
-        <rename/>
-      </field>      <field>        <name>total_rendimentos_salarios_minimos</name>
-        <rename/>
-      </field>      <field>        <name>total_filhos_nascidos_vivos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_total_filhos_nascidos_vivos</name>
-        <rename/>
-      </field>      <field>        <name>total_filhos_nascidos_vivos_estavam_vivos</name>
-        <rename/>
-      </field>      <field>        <name>idade_ultimo_filho_nascido_vivo</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_idade_ultimo_filho_nascido_vivo</name>
-        <rename/>
-      </field>      <field>        <name>total_filhos_nascidos_mortos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_total_filhos_nascidos_mortos</name>
-        <rename/>
-      </field>      <field>        <name>total_filhos_tidos</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_total_filhos_tidos</name>
-        <rename/>
-      </field>      <field>        <name>peso</name>
-        <rename/>
-      </field>      <field>        <name>estrato_imputacao_renda</name>
-        <rename/>
-      </field>      <field>        <name>estrato_imputacao_renda_parcial</name>
-        <rename/>
-      </field>      <field>        <name>filhos_nascidos_vivos_homens</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_nascidos_vivos_homens</name>
-        <rename/>
-      </field>      <field>        <name>filhos_nascidos_vivos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_nascidos_vivos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>filhos_estavam_vivos_homens</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_estavam_vivos_homens</name>
-        <rename/>
-      </field>      <field>        <name>filhos_estavam_vivos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_estavam_vivos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>sexo_ultimo_filho_nascido_vivo</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_sexo_ultimo_filho_nascido_vivo</name>
-        <rename/>
-      </field>      <field>        <name>filhos_nascidos_mortos_homens</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_nascidos_mortos_homens</name>
-        <rename/>
-      </field>      <field>        <name>filhos_nascidos_mortos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>cod_imputacao_filhos_nascidos_mortos_mulheres</name>
-        <rename/>
-      </field>      <field>        <name>cod_curso_mais_elevado_concluido_1</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_nascimento_v4219</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_residencia_anterior_v4239</name>
-        <rename/>
-      </field>      <field>        <name>cod_uf_ou_pais_residencia_31-07-1995_v4269</name>
-        <rename/>
-      </field>      <field>        <name>cod_pais_estrangeiro_trabalha_estuda_v4279</name>
-        <rename/>
-      </field>      <field>        <name>cod_antigo_ocupacao</name>
-        <rename/>
-      </field>      <field>        <name>cod_antigo_atividade</name>
-        <rename/>
-      </field>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>cod_imputacao_afastado_trabalho_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_ajudante_rural_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_ano_fixou_residencia_brasil</name>
-      </remove>      <remove>        <name>cod_imputacao_aposentado_previdencia_oficial_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_aprendiz_estagiario_ajudante_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_capacidade_enxergar</name>
-      </remove>      <remove>        <name>cod_imputacao_capacidade_locomocao</name>
-      </remove>      <remove>        <name>cod_imputacao_capacidade_ouvir</name>
-      </remove>      <remove>        <name>cod_imputacao_concluiu_curso_frequentado</name>
-      </remove>      <remove>        <name>cod_imputacao_contribuinte_previdencia_oficial</name>
-      </remove>      <remove>        <name>cod_imputacao_cor</name>
-      </remove>      <remove>        <name>cod_imputacao_cultivo_alimentacao_domicilio_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_curso_frequentado</name>
-      </remove>      <remove>        <name>cod_imputacao_curso_mais_elevado_concluido</name>
-      </remove>      <remove>        <name>cod_imputacao_curso_mais_elevado_frequentou</name>
-      </remove>      <remove>        <name>cod_imputacao_deficiencias</name>
-      </remove>      <remove>        <name>cod_imputacao_empregado_rjfp_ou_militar</name>
-      </remove>      <remove>        <name>cod_imputacao_estado_civil</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_estavam_vivos_homens</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_estavam_vivos_mulheres</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_nascidos_mortos_homens</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_nascidos_mortos_mulheres</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_nascidos_vivos_homens</name>
-      </remove>      <remove>        <name>cod_imputacao_filhos_nascidos_vivos_mulheres</name>
-      </remove>      <remove>        <name>cod_imputacao_frequenta_escola</name>
-      </remove>      <remove>        <name>cod_imputacao_horas_por_semana_trabalho_principal</name>
-      </remove>      <remove>        <name>cod_imputacao_horas_trabalhadas_demais_trabalhos</name>
-      </remove>      <remove>        <name>cod_imputacao_idade_anos_completos</name>
-      </remove>      <remove>        <name>cod_imputacao_idade_meses</name>
-      </remove>      <remove>        <name>cod_imputacao_idade_ultimo_filho_nascido_vivo</name>
-      </remove>      <remove>        <name>cod_imputacao_municipio_residencia</name>
-      </remove>      <remove>        <name>cod_imputacao_municipio_uf_ou_pais_que_trabalha</name>
-      </remove>      <remove>        <name>cod_imputacao_nacionalidade</name>
-      </remove>      <remove>        <name>cod_imputacao_nasceu_municipio</name>
-      </remove>      <remove>        <name>cod_imputacao_nasceu_nesta_uf</name>
-      </remove>      <remove>        <name>cod_imputacao_natureza_ultima_uniao</name>
-      </remove>      <remove>        <name>cod_imputacao_novo_atividade</name>
-      </remove>      <remove>        <name>cod_imputacao_novo_ocupacao</name>
-      </remove>      <remove>        <name>cod_imputacao_numero_familia</name>
-      </remove>      <remove>        <name>cod_imputacao_outros_rendimentos</name>
-      </remove>      <remove>        <name>cod_imputacao_problema_mental_permanente</name>
-      </remove>      <remove>        <name>cod_imputacao_providencia_para_conseguir_trabalho</name>
-      </remove>      <remove>        <name>cod_imputacao_quantos_empregados_na_firma</name>
-      </remove>      <remove>        <name>cod_imputacao_quantos_trabalhos_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_relacao_resp_domicilio</name>
-      </remove>      <remove>        <name>cod_imputacao_relacao_resp_familia</name>
-      </remove>      <remove>        <name>cod_imputacao_religia</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_aluguel</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_aposentadoria_pensao</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_bruto_demais_trabalhos</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_bruto_trabalho_principal</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_pensao_alimenticia_mesada_doacao</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_renda_minima_bolsa-escola_seguro-desemprego</name>
-      </remove>      <remove>        <name>cod_imputacao_rendimento_trabalho_principal</name>
-      </remove>      <remove>        <name>cod_imputacao_residencia_31-07-1995</name>
-      </remove>      <remove>        <name>cod_imputacao_sabe_ler_escrever</name>
-      </remove>      <remove>        <name>cod_imputacao_sem_rendimentos_demais_trabalhos</name>
-      </remove>      <remove>        <name>cod_imputacao_sempre_morou_municipio</name>
-      </remove>      <remove>        <name>cod_imputacao_serie_frequentada</name>
-      </remove>      <remove>        <name>cod_imputacao_sexo</name>
-      </remove>      <remove>        <name>cod_imputacao_sexo_ultimo_filho_nascido_vivo</name>
-      </remove>      <remove>        <name>cod_imputacao_tempo_moradia_uf</name>
-      </remove>      <remove>        <name>cod_imputacao_tempo_morando_municipio</name>
-      </remove>      <remove>        <name>cod_imputacao_tipo_trabalho</name>
-      </remove>      <remove>        <name>cod_imputacao_total_filhos_nascidos_mortos</name>
-      </remove>      <remove>        <name>cod_imputacao_total_filhos_nascidos_vivos</name>
-      </remove>      <remove>        <name>cod_imputacao_total_filhos_tidos</name>
-      </remove>      <remove>        <name>cod_imputacao_trabalho_remunerado_ultima_semana_julho_2000</name>
-      </remove>      <remove>        <name>cod_imputacao_uf_ou_pais_anterior</name>
-      </remove>      <remove>        <name>cod_imputacao_uf_ou_pais_nascimento</name>
-      </remove>      <remove>        <name>cod_imputacao_uf_ou_pais_residencia_31-07-1995</name>
-      </remove>      <remove>        <name>cod_imputacao_ultima_serie_aprovada</name>
-      </remove>      <remove>        <name>cod_imputacao_vive_com_conjuge</name>
-      </remove>    </fields>    <cluster_schema/>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>Y</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>DOS</format>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;Mateus&#x5c;Arquivos&#x5c;BSI&#x5c;TCC&#x5c;Bases&#x5c;IBGE&#x5c;Censo 2000&#x5c;Dados ES&#x5c;Pes32.txt</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>Fixed</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>V0102</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>0</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1002</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>2</position>
+        <length>4</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1003</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>6</position>
+        <length>5</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0103</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>11</position>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0104</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>18</position>
+        <length>8</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0300</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>38</position>
+        <length>8</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0400</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>46</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1004</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>48</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>AREAP</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>50</position>
+        <length>13</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1001</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>63</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1005</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>64</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1006</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>65</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V1007</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>66</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>MARCA</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>67</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0401</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>68</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0401</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>69</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0402</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>70</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0402</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>72</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0403</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>73</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0403</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>75</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0404</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>76</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0404</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>77</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4752</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>78</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4752</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>81</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4754</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>82</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4754</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>84</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4070</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>85</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0408</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>86</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0408</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>87</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4090</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>88</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4090</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>91</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0410</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>92</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0410</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>93</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0411</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>94</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0411</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>95</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0412</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>96</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0412</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>97</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0413</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>98</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0413</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>99</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0414</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>100</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0414</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>101</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0415</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>102</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0415</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>103</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0416</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>104</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0416</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>106</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0417</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>107</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0417</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>108</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0418</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>109</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0418</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>110</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0419</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>111</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0419</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>112</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0420</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>113</position>
+        <length>4</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0420</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>117</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4210</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>118</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4210</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>120</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0422</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>121</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0422</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>123</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4230</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>124</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4230</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>126</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0424</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>127</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0424</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>128</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4250</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>129</position>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4250</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>136</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4260</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>137</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4260</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>139</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4276</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>140</position>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4276</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>147</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0428</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>148</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0428</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>149</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0429</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>150</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0429</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>151</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0430</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>152</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0430</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>154</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0431</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>155</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0431</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>156</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0432</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>157</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0432</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>158</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0433</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>159</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0433</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>161</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0434</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>162</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0434</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>163</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4355</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>164</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4355</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>166</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4300</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>167</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0436</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>169</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0436</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>170</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0437</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>171</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0437</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>172</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0438</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>173</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0438</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>174</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0439</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>175</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0439</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>176</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0440</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>177</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0440</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>178</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0441</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>179</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0441</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>180</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0442</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>181</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0442</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>182</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0443</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>183</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0443</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>184</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0444</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>185</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0444</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>186</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4452</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>187</position>
+        <length>4</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4452</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>191</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4462</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>192</position>
+        <length>5</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4462</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>197</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0447</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>198</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0447</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>199</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0448</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>200</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0448</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>201</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0449</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>202</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0449</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>203</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0450</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>204</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0450</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>205</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4511</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>206</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4511</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>207</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4512</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>208</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4512</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>214</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4513</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>215</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4514</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>221</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4521</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>227</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4521</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>228</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4522</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>229</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4522</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>235</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4523</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>236</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4524</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>242</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4525</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>248</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4526</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>254</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0453</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>260</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0453</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>262</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0454</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>263</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0454</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>265</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4534</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>266</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0455</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>269</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0455</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>270</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0456</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>271</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0456</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>272</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4573</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>273</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4573</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>279</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4583</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>280</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4583</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>286</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4593</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>287</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4593</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>293</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4603</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>294</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4603</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>300</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4613</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>301</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4613</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>307</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4614</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>308</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4615</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>314</position>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4620</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>320</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4620</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>322</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0463</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>323</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4654</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>325</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4654</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>327</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4670</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>328</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4670</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>330</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4690</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>331</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0463</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>333</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>P001</name>
+        <type>BigNumber</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>334</position>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ESTR</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>345</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ESTRP</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>347</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4621</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>349</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4621</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>351</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4622</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>352</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4622</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>354</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4631</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>355</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4631</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>357</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4632</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>358</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4632</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>360</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V0464</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>361</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M0464</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>362</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4671</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>363</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4671</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>365</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4672</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>366</position>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>M4672</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>368</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4354</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>369</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4219</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>372</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4239</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>375</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4269</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>378</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4279</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>381</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4451</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>384</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>V4461</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>387</position>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -4227,8 +6406,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>192</yloc>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
