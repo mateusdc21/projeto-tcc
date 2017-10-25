@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>KTR_Load_Minicipios</name>
+    <name>KTR_Salva_Grupos_Negativos</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,20 +427,20 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2017&#x2f;03&#x2f;05 20&#x3a;38&#x3a;37.573</created_date>
+    <created_date>2017&#x2f;05&#x2f;28 22&#x3a;10&#x3a;14.356</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2017&#x2f;03&#x2f;05 20&#x3a;38&#x3a;37.573</modified_date>
+    <modified_date>2017&#x2f;05&#x2f;28 22&#x3a;10&#x3a;14.356</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>Teste-dbf</name>
+    <name>Base-TCC</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>teste-dbf</database>
+    <database>base-tcc</database>
     <port>5432</port>
     <username>pentaho</username>
     <password>Encrypted 2be98afc86aa7f2e4cb09ab7eca93a7d5</password>
@@ -461,19 +461,14 @@
   </connection>
   <order>
     <hop>
-      <from>XBase input</from>
-      <to>Table output</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Microsoft Excel Input</from>
+      <from>Table input</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Microsoft Excel Input</name>
-    <type>ExcelInput</type>
+    <name>Table input</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -482,91 +477,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <header>Y</header>
-    <noempty>Y</noempty>
-    <stoponempty>N</stoponempty>
-    <filefield/>
-    <sheetfield/>
-    <sheetrownumfield/>
-    <rownumfield/>
-    <sheetfield/>
-    <filefield/>
+    <connection>Base-TCC</connection>
+    <sql>SELECT &#x2a;, &#x28;qtd&#x2a;&#x28;-1&#x29;&#x29; as modulo FROM agrupamento1_v3 WHERE qtd &#x3c; 0</sql>
     <limit>0</limit>
-    <encoding/>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
-    <file>
-      <name>C&#x3a;&#x5c;Users&#x5c;Mateus&#x5c;Arquivos&#x5c;BSI&#x5c;TCC&#x5c;TabWin&#x5c;MAPAS&#x5c;teste2.xlsx</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>CODIGO</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>ES_MUNICIP</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>SELECIONAD</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-    </fields>
-    <sheets>
-      <sheet>
-        <name>teste2</name>
-        <startrow>0</startrow>
-        <startcol>0</startcol>
-        </sheet>
-    </sheets>
-    <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
-    <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <spreadsheet_type>POI</spreadsheet_type>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -575,8 +492,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>192</yloc>
+      <xloc>192</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -592,11 +509,11 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Teste-dbf</connection>
+    <connection>Base-TCC</connection>
     <schema>public</schema>
-    <table>Municipios</table>
+    <table>grupos_nao_encontrados_v3</table>
     <commit>1000</commit>
-    <truncate>Y</truncate>
+    <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
@@ -611,12 +528,28 @@
     <return_field/>
     <fields>
         <field>
-          <column_name>CODIGO</column_name>
-          <stream_name>CODIGO</stream_name>
+          <column_name>v4752</column_name>
+          <stream_name>v4752</stream_name>
         </field>
         <field>
-          <column_name>MUNICIPIO</column_name>
-          <stream_name>ES_MUNICIP</stream_name>
+          <column_name>v0401</column_name>
+          <stream_name>v0401</stream_name>
+        </field>
+        <field>
+          <column_name>v0408</column_name>
+          <stream_name>v0408</stream_name>
+        </field>
+        <field>
+          <column_name>v0103</column_name>
+          <stream_name>v0103</stream_name>
+        </field>
+        <field>
+          <column_name>qtd</column_name>
+          <stream_name>modulo</stream_name>
+        </field>
+        <field>
+          <column_name>competencia</column_name>
+          <stream_name>competencia</stream_name>
         </field>
     </fields>
     <cluster_schema/>
@@ -627,43 +560,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>701</xloc>
-      <yloc>115</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>XBase input</name>
-    <type>XBaseInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <file_dbf>C&#x3a;&#x5c;Users&#x5c;Mateus&#x5c;Arquivos&#x5c;BSI&#x5c;TCC&#x5c;TabWin&#x5c;MAPAS&#x5c;teste2.dbf</file_dbf>
-    <limit>0</limit>
-    <add_rownr>N</add_rownr>
-    <field_rownr/>
-    <include>N</include>
-    <include_field/>
-    <charset_name/>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>304</xloc>
-      <yloc>112</yloc>
+      <xloc>384</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
